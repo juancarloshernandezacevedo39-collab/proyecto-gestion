@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ titulo }}{% endblock %}
+{% block content %}
+<h1 class="page-title h3">{{ titulo }}</h1>
+<div class="panel p-4">
+  <p class="mb-1">Este módulo se implementa en el <strong>{{ hito }}</strong>.</p>
+  <p class="muted mb-0">Reemplaza esta vista en <code>app/{{ request.blueprint }}/</code>.</p>
+</div>
+{% endblock %}

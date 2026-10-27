@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="page-title h2 mb-1">Administración y seguimiento de proyectos de software</h1>
+<p class="muted mb-4">Aplicación modular que se construye por hitos. Cada módulo se activa cuando su hito se integra a <code>main</code>.</p>
+
+<div class="panel">
+  <ol class="hito-list">
+    {% for nombre, endpoint in hitos %}
+      <li><a href="{{ url_for(endpoint) }}">{{ nombre }}</a></li>
+    {% endfor %}
+  </ol>
+</div>
+{% endblock %}
